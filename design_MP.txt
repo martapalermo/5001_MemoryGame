@@ -1,0 +1,69 @@
+''' Marta Palermo Design Method for Final Project '''
+
+In my program I used three classes:
+    1. Board: 
+        - Overarching task for class was to create all the graphic elements
+        pertaining all board-related features.
+        
+        - The majority of the methods in this class are designated to create
+        the various borders for the three main areas of the game:
+            * leaderboard
+            * player status board
+            * main card board
+            
+        - In this first class I defined turtles and a leaderboard attribute
+        as well as 10 methods which included loading the correct rectangle
+        designs for the three boards mentioned above ^, registering and loading
+        all images/gif's needed for visuals like cards/ quit button and
+        error messages, as well as methods needed to open, read/write and load
+        the leaderboard txt files.
+        
+    2. Card:
+        - Overarching task for class was to create the object of the cards
+        with specific attributes including: front image, back image, placement
+        coordinates, and card area. An additional attribute that was set was
+        flipped, which let the program know about the status of the card,
+        and whether it was flipped(True) or not(False).
+        
+        - No additional methods added.
+        
+    3. Game:
+        - Overarching task for class was to run the game - basically where the
+        "game loop" took place.
+
+        - Many attributes were set and initiated, including the score keeping
+        variables (2 counters for guesses and matches), turtles, and two lists
+        (leaderboard, and list including cards being used in the game given the
+        user selection). Methods from the Board class were called in order to
+        be run and be able to reference other attributes within other classes
+        (ex. player name and card number for board). 3 set lists of cards were
+        registered and called accordingly. 
+
+        - Methods in this class included: deal, assigning placement coordinates to all
+        dealt cards, method for recording onclick events - measuring matches/guesses,
+        a method determinig when the game would end, another one used to calculate the
+        "clickable" area of the dealt cards and lastly a method for clearing the two cards
+        in a confirmed match, and flipping card method.
+
+    Data structures used in general were primarily lists, and a dictionary.
+    Lists were picked due to the simplicity in creating them, and manipulating ordered items
+    when necessary. The dictionary was used for an instance where order wasn't particularly
+    necessary, but facilitated the call and passing of certain variables. 
+        
+
+TESTING:     
+
+Testing concerning graphic elements was primarily completed through trial and error.
+In order to get the correct coordinates, I used a "find the clicked coordinates" function
+which would print out clicked coordinates, that were then used to calculate all areas and
+placements taking in account image size/pixels.
+
+Testing for opening: reading and writing txt files was initially done in a different .py document
+and then carefully carried onto main document, where it was then tested by checking input with
+expected output.
+
+The remainder of testing was completed via print statements where file names were compared
+when printed to the terminal, and print statements throughout loops and general logic implementation
+were used to confirm variables/lists/dictionary items that were being passed through other methods.
+
+
